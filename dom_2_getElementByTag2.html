@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document - getElementsByTagName()</title>
+  </head>
+  <body>
+    <div id="main">
+      <p>Line One</p>
+      //b[0]
+      <p>Line Two</p>
+      //b[1]
+    </div>
+
+    <h3 id="demo1"></h3>
+    <h3 id="demo2"></h3>
+
+    <script>
+      const a = document.getElementById("main");
+      const b = a.getElementsByTagName("p");
+
+      document.getElementById("demo1").innerHTML =
+        "First line Data is: " + b[0].innerHTML;
+      document.getElementById("demo2").innerHTML =
+        "Second line Data is: " + b[1].innerHTML;
+    </script>
+  </body>
+</html>

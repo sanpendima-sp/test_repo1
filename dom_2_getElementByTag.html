@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - getElementsByTagName()</title>
+    <style>
+      h3 {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="abc1"></h3>
+
+    <script>
+      const v = document.getElementsByTagName("h3");
+
+      document.getElementById("abc1").innerHTML =
+        "Apple is good for health !!!";
+
+      document.write("First letter is: " + v[0].innerHTML);
+    </script>
+  </body>
+</html>

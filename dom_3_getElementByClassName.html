@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - getElementByClassName()</title>
+    <style>
+      .demo {
+        background: lightgreen;
+        width: fit-content;
+      }
+
+      #abc {
+        background: violet;
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="demo">This is Mansoon season</p>
+    <p class="demo">This is Summer season</p>
+    <p id="abc"></p>
+
+    <script>
+      const v1 = document.getElementsByClassName("demo");
+      //document.write(v1[0].innerHTML + " ");
+      //document.write(v1[1].innerHTML);
+      document.write(
+        "<br>" + "*****************************************" + "<br>"
+      );
+      document.getElementById("abc").innerHTML =
+        "New season is: " + v1[0].innerHTML;
+    </script>
+  </body>
+</html>

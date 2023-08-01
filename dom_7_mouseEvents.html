@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouse-over and mouse-out</title>
+    <style>
+      div {
+        background-color: aquamarine;
+        max-width: fit-content;
+        min-height: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div onmouseover="onOver(this)" onmouseout="onOut(this)">ABCD</div>
+
+    <script>
+      function onOver(obj) {
+        //alert("hello");
+        obj.innerHTML = "Welcome to JS Event DOM";
+      }
+
+      function onOut(obj) {
+        //alert("hai");
+        obj.innerHTML = "Good Bye to JS Event DOM";
+      }
+    </script>
+  </body>
+</html>
