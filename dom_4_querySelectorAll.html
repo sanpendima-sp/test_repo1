@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - querySelectorAll()</title>
+  </head>
+  <body>
+    <p class="demo">This is Mansoon season</p>
+    <p class="demo1">This is Summer season</p>
+    <p class="demo2">This is Summer season</p>
+    <p class="demo">This is Summer season</p>
+    <p id="abc"></p>
+
+    <script>
+      const v1 = document.querySelectorAll("p.demo");
+      document.getElementById("abc").innerHTML =
+        "New season is: " + v1[0].innerHTML;
+    </script>
+  </body>
+</html>
