@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+    <person>
+        <name>John</name>
+        <age>30</age>
+    </person>
+    <person>
+        <name>Jane</name>
+        <age>25</age>
+    </person>
+    <person>
+        <name>Karthi</name>
+        <age>26</age>
+    </person>
+    <person>
+        <name>Sai</name>
+        <age>27</age>
+    </person>
+    <person>
+        <name>Satish</name>
+        <age>28</age>
+    </person>
+</root>
