@@ -1,1 +1,60 @@
+Java 8 introduced several significant features to the language and its standard library. Some of the key features introduced in Java 8 are:
 
+1. **Lambda Expressions:** Lambda expressions allow you to express instances of single-method interfaces (functional interfaces) using a concise syntax. They facilitate the use of functional programming concepts in Java. Lambdas enable you to write more readable and maintainable code by reducing boilerplate code for anonymous inner classes.
+
+   Example:
+   ```java
+   int add = (a, b) -> a + b
+   
+   int add(int a, int b){
+   	return a+b;
+   }
+   ```
+
+2. **Functional Interfaces:** Java 8 introduced the `@FunctionalInterface` annotation to explicitly mark interfaces that have a single abstract method as functional interfaces. These interfaces can be used with lambda expressions.
+
+3. **Stream API:** The Stream API enables processing sequences of elements (such as collections) in a functional and declarative way. It allows you to perform operations like filtering, mapping, sorting, and reducing on data with concise and expressive syntax.
+
+   Example:
+   ```java
+   List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+   int sum = numbers.stream()
+                   .filter(n -> n % 2 == 0)
+                   .mapToInt(n -> n)
+                   .sum();
+   ```
+
+4. **Default Methods:** Java 8 introduced the ability to define default methods within interfaces. This allows you to add new methods to interfaces without breaking existing implementations.
+
+   Example:
+   ```java
+   interface MyInterface {
+       void regularMethod();
+
+       default void defaultMethod() {
+           // Default implementation
+       }
+   }
+   ```
+
+5. **Method References:** Method references provide a way to refer to methods or constructors using their names as a shorthand notation. They are often used in conjunction with lambda expressions to simplify code.
+
+   Example:
+   ```java
+   List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+   names.forEach(System.out::println);
+   ```
+
+6. **Java Time API:** The new java.time package provides a more comprehensive and flexible date and time API compared to the old java.util.Date and java.util.Calendar classes. It addresses many issues and shortcomings of the older API.
+
+   Example:
+   ```java
+   LocalDateTime now = LocalDateTime.now();
+   System.out.println("Current date and time: " + now);
+   ```
+
+7. **Default and Static Interface Methods:** Java 8 introduced static methods in interfaces as well as default methods. Static interface methods can be called using the interface name, while default methods can be overridden or used as is in implementing classes.
+
+8. **New Functional Interfaces:** Java 8 added several new functional interfaces to the java.util.function package, such as `Predicate`, `Function`, `Supplier`, and `Consumer`, to facilitate common functional programming patterns.
+
+These features revolutionized the way Java code is written, making it more concise, expressive, and enabling functional programming paradigms within the language.
