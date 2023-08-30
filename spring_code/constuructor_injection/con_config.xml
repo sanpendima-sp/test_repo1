@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.baeldung.applicationcontext" />
+
+	<!--<bean name="certiobj"
+		class="com.app.springcore.constuructor_injection.Certificate">
+		<constructor-arg value="AI using Python!!!" />
+	</bean>-->
+
+	<!-- Or the above bean can also be written using 'c' schema like the
+	following code-->
+	<bean name="certiobj"
+		class="com.app.springcore.constuructor_injection.Certificate">
+		<constructor-arg value="JavaCertificate" type="String" />
+	</bean>
+
+	<bean name="person" class="com.app.springcore.constuructor_injection.Person">
+		<constructor-arg value="1234" type="int" />
+		<constructor-arg value="Vasundhara" type="String" />
+		<constructor-arg ref="certiobj" />
+	</bean>
+</beans>
