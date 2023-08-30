@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.baeldung.applicationcontext" />
+
+	<bean name="empobj" class="org.onlinespring.Employee">
+		<property name="name" value="SaiRam" />
+
+		<property name="phnos">
+			<list>
+				<value>9966339966</value>
+				<value>8855228855</value>
+				<value>7744117744</value>
+			</list>
+		</property>
+
+		<property name="addresses">
+			<set>
+				<value>1st lane, Dwarakanagar</value>
+				<value>2nd lane, Dwarakanagar</value>
+				<value>3rd lane, Dwarakanagar</value>
+			</set>
+		</property>
+		
+		<property name="courses">
+			<map>
+				<entry key="course1" value="java" />
+				<entry key="course2" value="python" />
+				<entry key="course3" value="nodejs" />
+			</map>
+		</property>
+
+	</bean>
+	
+	<bean name="dispobj" class="org.onlinespring.Employee">
+		<property name="name" value="HareRam" />
+
+		<property name="phnos">
+			<list>
+				<value>1122334455</value>
+				<value>0123456789</value>
+				<value>9876543210</value>
+			</list>
+		</property>
+
+		<property name="addresses">
+			<set>
+				<value>4st lane, RK Beach Road</value>
+				<value>5nd lane, MVP Colony</value>
+				<value>6rd lane, RTC Complex</value>
+			</set>
+		</property>
+		
+		<property name="courses">
+			<map>
+				<entry key="course1" value="node-js" />
+				<entry key="course2" value="reach-js" />
+				<entry key="course3" value="angular-js" />
+			</map>
+		</property>
+
+	</bean>
+</beans>
